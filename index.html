@@ -25,7 +25,7 @@
         <br />
         <h2>Search The Database</h2>
         <div>
-          <form action="http:///action_page.php" target="_blank">
+          <form id="search-form">
             <label for="m_AptamerType">Aptamer Type</label>
             <select id="m_AptamerType" name="AptamerType">
               <option value="All">All</option>
@@ -57,13 +57,12 @@
         </div>
         <div class="results">
           <ul id="search-results">
-            
           </ul>
         </div>
       </div>
     </div>
-    <!-- <div class="m_footer">
-      
-    </div> -->
+
+    <!-- Link to your submit.js file -->
+    <script src="submit.js" defer></script>
   </body>
 </html>
