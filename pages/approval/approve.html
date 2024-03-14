@@ -19,20 +19,47 @@
               <a href="/pages/contact/contact.html" class="m_right" rel="noreferrer">Contact Us</a>
               <a href="/pages/admin/admin.html" class="m_right" rel="noreferrer">Admin Login</a>
             </div>
-            <div class="m_main">
-              <form id="my-form">
-                  <h2>Login</h2>
-                  <div class="field">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
-                  </div>
-                  <div class="field">
-                    <label for="password">Password:</label>
-                    <input type="text" id="password" name="password" required>
-                  </div>
-                  <button type="submit">Submit</button>
-                </form>
-                
+            <!-- -------------------------------------------------------------------------------------------------------------------------- -->
+            <div class="custom-table-container">
+              <table class="custom-table">
+                  <thead>
+                      <tr>
+                          <th class="aptamer-column">Aptamer</th>
+                          <th class="target-column">Target</th>
+                          <th class="type-column">Aptamer Type</th>
+                          <th class="length-column">Aptamer Length</th>
+                          <th class="sequence-column">Aptamer Sequence</th>
+                          <th class="action-column">Action</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Aptamer 1</td>
+                          <td>Target 1</td>
+                          <td>AntiCancer</td>
+                          <td>20</td>
+                          <td>ACGTACGTACGTACGTACGT</td>
+                          <td>
+                              <button class="accept-btn">Accept</button>
+                              <button class="reject-btn">Reject</button>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>Aptamer 2</td>
+                          <td>Target 2</td>
+                          <td>Antiviral</td>
+                          <td>25</td>
+                          <td>ACGTACGTACGTACGTACGTACGT</td>
+                          <td>
+                              <button class="accept-btn">Accept</button>
+                              <button class="reject-btn">Reject</button>
+                          </td>
+                      </tr>
+                      <!-- Add more rows as needed -->
+                  </tbody>
+              </table>
           </div>
+          
+            <!------------- ------------------------------------------------------------------------------------------------------------------- -->
 </body>
 </html>

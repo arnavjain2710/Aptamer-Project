@@ -136,4 +136,64 @@ form {
   button:hover {
     background-color: #3e8e41;
   }
-  
+  /* --------------------------------------------------------------------------------------------------------------------------------------- */
+
+  .custom-table-container {
+    overflow-x: auto;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-table th, .custom-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.custom-table thead {
+    background-color: #f2f2f2;
+}
+
+.custom-table th {
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+.custom-table button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-table button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.aptamer-column, .target-column, .type-column, .length-column, .sequence-column, .action-column {
+    width: auto; /* Adjust width as needed */
+}
+
+.accept-btn, .reject-btn {
+    margin-right: 5px;
+}
+
+.reject-btn {
+  background-color: rgba(255, 0, 0, 0.9); /* Adjust alpha (last value) for desired transparency */
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .custom-table th, .custom-table td {
+        padding: 8px;
+    }
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------- */
