@@ -22,33 +22,42 @@
       
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------- -->
-            <div class="m_main">
-                <form id="my-form">
-                    <h2>Aptamer Query</h2>
-                    <div class="field">
-                      <label for="aptamer">Aptamer:</label>
-                      <input type="text" id="aptamer" name="aptamer" required>
-                    </div>
-                    <div class="field">
-                      <label for="target">Target:</label>
-                      <input type="text" id="target" name="target" required>
-                    </div>
-                    <div class="field">
-                      <label for="apt_type">Apt_type:</label>
-                      <input type="text" id="apt_type" name="apt_type" required>
-                    </div>
-                    <div class="field">
-                      <label for="length">Length:</label>
-                      <input type="text" id="length" name="length" required>
-                    </div>
-                    <div class="field">
-                      <label for="sequence">Sequence:</label>
-                      <textarea id="sequence" name="sequence" rows="5" cols="30" required></textarea>
-                    </div>
-                    <button type="submit">Submit</button>
-                  </form>
-                  
-            </div>
+            
+
+              <div class="form-container">
+                <form id="my-form" class="aptamer-query-form">
+                  <h2>Aptamer Query</h2>
+
+                  <div class="form-group">
+                    <label for="aptamer" class="form-label">Aptamer:</label>
+                    <input type="text" id="aptamer" name="aptamer" required class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="target" class="form-label">Target:</label>
+                    <input type="text" id="target" name="target" required class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="apt_type" class="form-label">Apt_type:</label>
+                    <input type="text" id="apt_type" name="apt_type" required class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="length" class="form-label">Length:</label>
+                    <input type="text" id="length" name="length" required class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="sequence" class="form-label">Sequence:</label>
+                    <textarea id="sequence" name="sequence" rows="5" cols="30" required class="form-control" style="overflow: hidden; height: 100px; max-width: 300px;">
+                    </textarea>                    
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
 </body>
