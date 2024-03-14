@@ -167,3 +167,29 @@ body {
     background-color: #f2f2f2;
     padding: 20px;
   }
+
+  /* ------------------------------------------------------------------------------------------------------------------------------------ */
+  .contact {
+    background-color: #f8f9fa; /* Light gray background */
+    border: 1px solid #ced4da; /* Gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the div */
+    margin-bottom: 20px; /* Space below the div */
+  }
+  
+  .contact h2 {
+    color: #007bff; /* Blue color for the heading */
+    font-size: 1.5em; /* Larger font size for the heading */
+    margin-bottom: 10px; /* Space below the heading */
+  }
+  
+  .contact p {
+    color: #6c757d; /* Gray color for the text */
+    font-size: 1em; /* Normal font size for the text */
+    margin: 5px 0; /* Adjusted margin for each paragraph */
+  }
+  
+  .contact p strong {
+    font-weight: bold; /* Bold text for strong elements */
+  }
+  
