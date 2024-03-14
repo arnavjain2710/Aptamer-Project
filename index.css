@@ -173,35 +173,67 @@
   }
 
   /* --------------------------------------------------------------------------------------------------------------------------------------------- */
-  #search-form {
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Search container */
+  .search-container {
+    width: 600px; /* Adjust width as needed */
+    margin: 50px auto; /* Center the container horizontally */
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  /* Form */
+  .search-form {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-#search-form label {
-    flex: 0 0 30%; /* Adjust width as needed */
-    margin-bottom: 5px;
-}
-
-#search-form select {
-    flex: 0 0 65%; /* Adjust width as needed */
+    flex-direction: column;
+    /* Additional styles for the form (optional) */
+  }
+  
+  /* Form group */
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Form label */
+  .form-label {
+    width: 120px; /* Adjust label width as needed */
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  /* Form control (select) */
+  .form-control {
+    flex: 1; /* Take up remaining space */
     padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-}
-
-#search-form input[type="submit"] {
-    flex: 0 0 100%; /* Adjust width as needed */
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  /* Submit button */
+  .btn {
+    display: inline-block;
     padding: 10px 20px;
-    background-color: blueviolet;
-    color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-}
+    background-color: #3498db; /* Adjust color as needed */
+    color: #fff; /* Text color */
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+ 
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
@@ -209,3 +241,5 @@
         flex: 0 0 100%;
     }
 }
+
+
