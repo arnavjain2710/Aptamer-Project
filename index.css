@@ -252,3 +252,72 @@ body {
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* Table styles */
+.search-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow-x: auto;
+  border: 1px solid #ccc; /* Add border to table */
+}
+
+.search-table th,
+.search-table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  word-wrap: break-word;
+}
+
+.search-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Block styles */
+.block {
+  border: 1px solid #ccc; /* Add border to block */
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .search-table th,
+  .search-table td {
+    padding: 6px;
+    font-size: 14px;
+  }
+  
+  /* Adjust block size for smaller screens */
+  .block {
+    padding: 5px; /* Decrease padding */
+    margin-top: 10px; /* Decrease margin */
+  }
+}
+
+/* Limiting words per block */
+.block p {
+  overflow: hidden;
+  text-overflow: ellipsis; /* Show ellipsis for text overflow */
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* Limit to 5 lines */
+  -webkit-box-orient: vertical;
+}
+
+
+
+
+
+
+
+
+
+
+
+
