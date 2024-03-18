@@ -173,65 +173,71 @@
   }
 
   /* --------------------------------------------------------------------------------------------------------------------------------------------- */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Search container */
-  .search-container {
-    width: 600px; /* Adjust width as needed */
-    margin: 50px auto; /* Center the container horizontally */
-    padding: 30px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-  }
-  
-  /* Form */
-  .search-form {
-    display: flex;
-    flex-direction: column;
-    /* Additional styles for the form (optional) */
-  }
-  
-  /* Form group */
-  .form-group {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Form label */
-  .form-label {
-    width: 120px; /* Adjust label width as needed */
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  /* Form control (select) */
-  .form-control {
-    flex: 1; /* Take up remaining space */
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    font-size: 16px;
-  }
-  
-  /* Submit button */
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #3498db; /* Adjust color as needed */
-    color: #fff; /* Text color */
-    transition: background-color 0.2s ease-in-out;
-  }
+ /* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Search container */
+.search-container {
+  width: 80%; /* Adjust width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Form */
+.search-form {
+  display: flex;
+  flex-direction: column;
+  /* Additional styles for the form (optional) */
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap; /* Wrap form elements on smaller screens */
+}
+
+/* Form label */
+.form-label {
+  width: 120px; /* Adjust label width as needed */
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Form control (select) */
+.form-control {
+  flex: 1; /* Take up remaining space */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+/* Submit button */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #3498db; /* Adjust color as needed */
+  color: #fff; /* Text color */
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #2980b9; /* Darker
+
+}
   
  
 
@@ -243,3 +249,6 @@
 }
 
 
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------- */
