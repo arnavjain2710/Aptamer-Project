@@ -4,6 +4,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="approve.css">
     <title>Aptabase</title>
+    <script>
+      window.onload = function() {
+        const authToken = localStorage.getItem('authtoken');
+        if (!authToken) {
+          window.location.href = '/pages/admin/admin.html'; // Redirect to the login page
+        }
+      }
+    </script>
   </head>
   <body>
     <u></u>
