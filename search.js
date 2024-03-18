@@ -74,15 +74,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const tableContent = data.map(item => `
           <tr>
-            <td>${item.Aptamer}</td>
-            <td>${item.Target}</td>
-            <td>${item['Aptamer Type']}</td>
-            <td>${item['Aptamer Length']}</td>
-            <td>${item['Aptamer Sequence']}</td>
-            <td>
-              <button class="accept-btn">Accept</button>
-              <button class="reject-btn">Reject</button>
-            </td>
+            <td>${item.aptamer}</td>
+            <td>${item.target}</td>
+            <td>${item.apt_type}</td>
+            <td>${item.length}</td>
+            <td>${item.sequence}</td>
           </tr>
         `).join('');
 
@@ -94,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
               <th class="type-column">Aptamer Type</th>
               <th class="length-column">Aptamer Length</th>
               <th class="sequence-column">Aptamer Sequence</th>
-              <th class="action-column">Action</th>
             </tr>
           </thead>
           <tbody>
