@@ -4,6 +4,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="approve.css">
     <title>Aptabase</title>
+    <script>
+      window.onload = function() {
+        const authToken = localStorage.getItem('authtoken');
+        if (!authToken) {
+          window.location.href = '/pages/admin/admin.html'; // Redirect to the login page
+        }
+      }
+    </script>
   </head>
   <body>
     <u></u>
@@ -19,49 +27,28 @@
         <a href="/pages/contact/contact.html" class="m_right" rel="noreferrer">Contact Us</a>
         <a href="/pages/admin/admin.html" class="m_right" rel="noreferrer">Admin Login</a>
       </div>
-      
 
-            <!-- -------------------------------------------------------------------------------------------------------------------------- -->
-            <div class="custom-table-container">
-              <table class="custom-table">
-                  <thead>
-                      <tr>
-                          <th class="aptamer-column">Aptamer</th>
-                          <th class="target-column">Target</th>
-                          <th class="type-column">Aptamer Type</th>
-                          <th class="length-column">Aptamer Length</th>
-                          <th class="sequence-column">Aptamer Sequence</th>
-                          <th class="action-column">Action</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>Aptamer 1</td>
-                          <td>Target 1</td>
-                          <td>AntiCancer</td>
-                          <td>20</td>
-                          <td>ACGTACGTACGTACGTACGT</td>
-                          <td>
-                              <button class="accept-btn">Accept</button>
-                              <button class="reject-btn">Reject</button>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>Aptamer 2</td>
-                          <td>Target 2</td>
-                          <td>Antiviral</td>
-                          <td>25</td>
-                          <td>ACGTACGTACGTACGTACGTACGT</td>
-                          <td>
-                              <button class="accept-btn">Accept</button>
-                              <button class="reject-btn">Reject</button>
-                          </td>
-                      </tr>
-                      <!-- Add more rows as needed -->
-                  </tbody>
-              </table>
-          </div>
-          
-            <!------------- ------------------------------------------------------------------------------------------------------------------- -->
-</body>
+      <!-- Table will be populated by JavaScript -->
+      <div class="custom-table-container">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th class="aptamer-column">Aptamer</th>
+              <th class="target-column">Target</th>
+              <th class="type-column">Aptamer Type</th>
+              <th class="length-column">Aptamer Length</th>
+              <th class="sequence-column">Aptamer Sequence</th>
+              <th class="action-column">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Table rows will be populated dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Include JavaScript file -->
+    <script src="approve.js"></script>
+  </body>
 </html>
