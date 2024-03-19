@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const formData = {
         email: userEmail,
         comment: comment
-      };
+      }
   
       // Call API to submit comment
       fetch('https://example.com/api/comment', {
