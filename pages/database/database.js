@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
                       <button class="reject-btn" onclick="handleAction('${item.id}')">Delete</button>
                   </td>
               `;
+              newRow.querySelector('.reject-btn').addEventListener('click', () => handleAction(item.id));
               tableBody.appendChild(newRow);
           });
       })
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to handle action button click
   function handleAction(itemId) {
-      fetch(`https://aptabase.shuttleapp.rs/v1/admin/delele/${item.id}`, {
+      fetch(`https://aptabase.shuttleapp.rs/v1/admin/delete/${itemId}`, { // Fixed typo here from delele to delete
           method: 'DELETE'
       })
       .then(response => {
