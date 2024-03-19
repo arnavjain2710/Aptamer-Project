@@ -13,8 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
         length: document.getElementById('length').value,
         sequence: document.getElementById('sequence').value,
         effect: document.getElementById('effect').value,
-        reference: document.getElementById('reference').value`~`
+        reference: document.getElementById('reference').value
       };
+
+      console.log(JSON.stringify(formData))
   
       // Make the API call
       fetch('http://aptabase.shuttleapp.rs/v1/insert', {
