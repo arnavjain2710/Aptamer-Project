@@ -54,10 +54,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     <td>${item.length}</td>
                     <td>${item.sequence}</td>
                     <td>
-                        <button class="accept-btn" onclick="handleAction('${item.id}', 'accept')">Accept</button>
-                        <button class="reject-btn" onclick="handleAction('${item.id}', 'reject')">Reject</button>
+                        <button class="accept-btn">Accept</button>
+                        <button class="reject-btn">Reject</button>
                     </td>
                 `;
+                // Add event listeners to the buttons
+                newRow.querySelector('.accept-btn').addEventListener('click', () => handleAction(item.id, 'accept'));
+                newRow.querySelector('.reject-btn').addEventListener('click', () => handleAction(item.id, 'reject'));
+
                 tableBody.appendChild(newRow);
             });
         })
