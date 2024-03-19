@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   <td>${item.length}</td>
                   <td>${item.sequence}</td>
                   <td>
-                      <button class="reject-btn" onclick="handleAction('${item.id}', 'reject')">Delete</button>
+                      <button class="reject-btn" onclick="handleAction('${item.id}')">Delete</button>
                   </td>
               `;
               tableBody.appendChild(newRow);
@@ -46,14 +46,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Function to handle action button click
-  function handleAction(itemId, action) {
-      fetch('https://aptabase.shuttleapp.rs/v1/admin/delele', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${authToken}`
-          },
-          body: JSON.stringify({ id: itemId, action: action })
+  function handleAction(itemId) {
+      fetch(`https://aptabase.shuttleapp.rs/v1/admin/delele/${item.id}`, {
+          method: 'DELETE'
       })
       .then(response => {
           if (!response.ok) {
