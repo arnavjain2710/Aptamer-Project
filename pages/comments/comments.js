@@ -45,6 +45,37 @@ function displayComments(comments) {
         deleteButton.textContent = 'Delete';
         commentDiv.appendChild(deleteButton);
 
+        // Add event listener to delete button
+        deleteButton.addEventListener('click', () => {
+            deleteComment(comment.id); // Call deleteComment function when the delete button is clicked
+        });
+
         commentList.appendChild(commentDiv);
     });
 }
+
+function deleteComment(commentId) {
+    // Implement the logic to delete the comment with the specified ID
+    // You can make a fetch request to the server to delete the comment
+    // Example:
+    const apiUrl = `https://aptabase.shuttleapp.rs/v1/admin/deletecomment/${commentId}`;
+    fetch(apiUrl, {
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${authToken}`
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to delete comment');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Handle success response
+    })
+    .catch(error => {
+        console.error('Error deleting comment:', error);
+    });
+}
+
