@@ -25,21 +25,38 @@ document.addEventListener('DOMContentLoaded', function () {
           tableBody.innerHTML = ''; // Clear existing table rows
 
           // Populate table with fetched data
-          data.forEach(item => {
-              const newRow = document.createElement('tr');
-              newRow.innerHTML = `
-                  <td>${item.aptamer}</td>
-                  <td>${item.target}</td>
-                  <td>${item.apt_type}</td>
-                  <td>${item.length}</td>
-                  <td>${item.sequence}</td>
-                  <td>
-                      <button class="reject-btn" onclick="handleAction('${item.id}')">Delete</button>
-                  </td>
-              `;
-              newRow.querySelector('.reject-btn').addEventListener('click', () => handleAction(item.id));
-              tableBody.appendChild(newRow);
-          });
+       // Inside the fetchAndPopulateData function
+
+// Populate table with fetched data
+function handleEdit(itemId) {
+    window.location.href = `/pages/edit/edit.html/${itemId}`;
+}
+
+
+                    data.forEach(item => {
+                        const newRow = document.createElement('tr');
+                        newRow.innerHTML = `
+                            <td>${item.aptamer}</td>
+                            <td>${item.target}</td>
+                            <td>${item.apt_type}</td>
+                            <td>${item.length}</td>
+                            <td>${item.sequence}</td>
+                            <td>
+                                <button class="reject-btn" onclick="handleDelete('${item.id}')">Delete</button>
+                            </td>
+                            <td>
+                                <button class="edit-btn" onclick="handleEdit('${item.id}')">Edit</button>
+                            </td>
+                        `;
+                        newRow.querySelector('.reject-btn').addEventListener('click', () => handleAction(item.id));
+                        tableBody.appendChild(newRow);
+                        newRow.querySelector('.edit-btn').addEventListener('click', () => handleEdit(item.id));
+                        
+                      
+                    });
+
+                    // Function to handle edit button click
+                   
       })
       .catch(error => {
           console.error('Error fetching data:', error);
