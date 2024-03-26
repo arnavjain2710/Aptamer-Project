@@ -143,6 +143,10 @@ body {
   border-radius: 4px;
 }
 
+.OR{
+  text-align: center;
+  justify-content: center;
+}
 .form-control:focus {
   outline: none;
   border-color: #007bff;
