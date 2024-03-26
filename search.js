@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault();
 
     // Get keyword input
-    const keyword = document.getElementById('keyword').value;
+    const keyword = document.getElementById('keyword').value.toLowerCase();
     fetch(`https://aptabase.shuttleapp.rs/v1/fetch/${keyword}`)
     .then(response => {
       if (!response.ok) {
