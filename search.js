@@ -25,17 +25,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
           const headerRow = table.createTHead().insertRow();
           Object.keys(data[0]).forEach(key => {
-            const headerCell = document.createElement('th');
-            headerCell.textContent = key;
-            headerRow.appendChild(headerCell);
+            if (key !== 'id') { // Exclude 'id' from being displayed
+              const headerCell = document.createElement('th');
+              headerCell.textContent = key;
+              headerRow.appendChild(headerCell);
+            }
           });
 
           const tbody = table.createTBody();
           data.forEach(result => {
             const row = tbody.insertRow();
-            Object.values(result).forEach(value => {
-              const cell = row.insertCell();
-              cell.textContent = value;
+            Object.entries(result).forEach(([key, value]) => {
+              if (key !== 'id') { // Exclude 'id' from being displayed
+                const cell = row.insertCell();
+                cell.textContent = value;
+              }
             });
           });
 
@@ -74,17 +78,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const headerRow = table.createTHead().insertRow();
         Object.keys(data[0]).forEach(key => {
-          const headerCell = document.createElement('th');
-          headerCell.textContent = key;
-          headerRow.appendChild(headerCell);
+          if (key !== 'id') { // Exclude 'id' from being displayed
+            const headerCell = document.createElement('th');
+            headerCell.textContent = key;
+            headerRow.appendChild(headerCell);
+          }
         });
 
         const tbody = table.createTBody();
         data.forEach(result => {
           const row = tbody.insertRow();
-          Object.values(result).forEach(value => {
-            const cell = row.insertCell();
-            cell.textContent = value;
+          Object.entries(result).forEach(([key, value]) => {
+            if (key !== 'id') { // Exclude 'id' from being displayed
+              const cell = row.insertCell();
+              cell.textContent = value;
+            }
           });
         });
 
