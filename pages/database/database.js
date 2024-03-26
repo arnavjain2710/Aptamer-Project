@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function fetchAndPopulateData() {
-      fetch(`https://aptabase.shuttleapp.rs/v1/fetch`, {
+      fetch(`https://aptabase.shuttleapp.rs/v1/fetchadmin`, {
           headers: {
               'Authorization': `Bearer ${authToken}`
           }

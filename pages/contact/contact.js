@@ -13,14 +13,15 @@ document.addEventListener('DOMContentLoaded', function () {
         email: userEmail,
         comment: comment
       }
-  
+      console.log(JSON.stringify(formData))
       // Call API to submit comment
-      fetch('https://aptabase.shuttleapp.rs/v1/view/comment', {
+      fetch('https://aptabase.shuttleapp.rs/v1/comment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
+
       })
       .then(response => {
         if (!response.ok) {
