@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="edit.css">
+    <title>Edit Data</title>
+</head>
+<body>
+    <div class="edit-form-container">
+        <form id="edit-form" class="aptamer-edit-form">
+            <h2>Edit Aptamer</h2>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" name="email" required class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="aptamer" class="form-label">Aptamer:</label>
+                <input type="text" id="aptamer" name="aptamer" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="target" class="form-label">Target:</label>
+                <input type="text" id="target" name="target" required class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="apt_type" class="form-label">Aptamer Type:</label>
+                <input type="text" id="apt_type" name="apt_type" required class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="length" class="form-label">Aptamer Length:</label>
+                <input type="text" id="length" name="length" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="sequence" class="form-label">Aptamer Sequence:</label>
+                <textarea id="sequence" name="sequence" rows="5" cols="30" class="form-control" style="overflow: hidden; max-height: 100px; max-width: 300px;"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="effect" class="form-label">Effect:</label>
+                <input type="text" id="effect" name="effect" required class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="reference" class="form-label">Reference:</label>
+                <input type="text" id="reference" name="reference" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Changes</button>
+        </form>
+    </div>
+
+    <script src="edit.js"></script>
+</body>
+</html>
